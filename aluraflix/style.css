@@ -1,0 +1,242 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f7f7f7;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Gradiente roxo para preto */
+:root {
+    --gradiente-primario: linear-gradient(135deg, #6a0dad, #000000);
+    --cor-secundaria: #f4f4f4;
+    --cor-texto: #fff;
+}
+
+/* Cabeçalho */
+header {
+    background: var(--gradiente-primario);
+    color: var(--cor-texto);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 1.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.banner h2 {
+    font-size: 2rem;
+    background: var(--gradiente-primario);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.banner .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: var(--gradiente-primario);
+    color: var(--cor-texto);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.banner .btn:hover {
+    background-color: #5a009d;
+}
+
+/* Seção de Livros */
+.livros {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.livros h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    background: var(--gradiente-primario);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Lista de livros com rolagem horizontal */
+.livros-lista {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.livros-lista::-webkit-scrollbar {
+    height: 8px;
+}
+
+.livros-lista::-webkit-scrollbar-thumb {
+    background-color: #d1c4e9;
+    border-radius: 4px;
+}
+
+.livro {
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    min-width: 200px;
+    max-width: 200px;
+    flex: 0 0 auto;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+}
+
+.livro img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.livro h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.livro p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.livro span {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Sobre a Escritora */
+.escritora {
+    padding: 2rem 1rem;
+    background-color: var(--cor-secundaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.escritora img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.escritora .descricao {
+    max-width: 500px;
+}
+
+.escritora h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.escritora p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Contato */
+.contato {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contato p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contato input, .contato textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contato button {
+    background: var(--gradiente-primario);
+    color: var(--cor-texto);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contato button:hover {
+    background-color: #5a009d;
+}
+
+/* Rodapé */
+footer {
+    background: var(--gradiente-primario);
+    color: var(--cor-texto);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
